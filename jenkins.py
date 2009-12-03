@@ -1,0 +1,16 @@
+from ctypes import cdll
+from ctypes import c_int
+from ctypes import byref
+
+lookup3 = cdll.LoadLibrary("lookup3.so")
+
+
+def hashlittle(s, seed=0):
+    return lookup3.hashlittle(s, len(s), seed)
+
+
+def hashlittle2(s, seed1=0, seed2=0):
+    init_val1 = c_int(seed1)
+    init_val2 = c_int(seed2)
+    lookup3.hashlittle2(s, len(s), byref(init_val1), byref(init_val2))
+    return init_val1.value, init_val2.value
