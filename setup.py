@@ -8,5 +8,5 @@ setup(name='jenkins',
       author_email="john@milo.com",
       url="http://github.com/lgastako/jenkins/",
       py_modules=['jenkins'],
-      ext_modules=[Extension('lookup3', ['lookup3.c'])],
+      ext_modules=[Extension('lookup3', ['src/lookup3.c'])],
       )
