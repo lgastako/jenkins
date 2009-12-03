@@ -2,7 +2,7 @@ from distutils.core import setup
 from distutils.core import Extension
 
 setup(name='jenkins',
-      version='1.0',
+      version='1.0.1',
       description="Python ctypes wrapper around Bob Jenkins' hash functions.",
       author="John Evans",
       author_email="john@milo.com",
