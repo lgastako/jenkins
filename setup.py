@@ -6,7 +6,7 @@ setup(name='jenkins',
       description="Python ctypes wrapper around Bob Jenkins' hash functions.",
       author="John Evans",
       author_email="john@milo.com",
-#      url="
+      url="http://github.com/lgastako/jenkins/",
       py_modules=['jenkins'],
       ext_modules=[Extension('lookup3', ['lookup3.c'])],
       )
