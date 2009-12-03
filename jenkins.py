@@ -1,8 +1,12 @@
+import os
+
 from ctypes import cdll
 from ctypes import c_int
 from ctypes import byref
 
-lookup3 = cdll.LoadLibrary("lookup3.so")
+from distutils.sysconfig import get_python_lib
+
+lookup3 = cdll.LoadLibrary(os.path.join(get_python_lib(), "lookup3.so"))
 
 
 def hashlittle(s, seed=0):
